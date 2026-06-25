@@ -66,3 +66,14 @@
     margin-top: 0px;
     display: flex;
 }
+
+select option:checked,
+select option:hover {
+    background-color: #cc0000 !important;
+    color: white !important;
+}
+
+select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #cc0000;
+}
