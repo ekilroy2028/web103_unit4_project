@@ -58,4 +58,37 @@ const EditCar = () => {
 
       <label>Color</label>
       <select value={color} onChange={e => setColor(e.target.value)}>
-        {carOptions.color.map(o => <option key={o.name}>{o.name}
+        {carOptions.color.map(o => (
+          <option key={o.name} value={o.name}>{o.name} (+${o.price})</option>
+        ))}
+      </select>
+
+      <label>Wheels</label>
+      <select value={wheels} onChange={e => setWheels(e.target.value)}>
+        {carOptions.wheels.map(o => (
+          <option key={o.name} value={o.name}>{o.name} (+${o.price})</option>
+        ))}
+      </select>
+
+      <label>Interior</label>
+      <select value={interior} onChange={e => setInterior(e.target.value)}>
+        {carOptions.interior.map(o => (
+          <option key={o.name} value={o.name}>{o.name} (+${o.price})</option>
+        ))}
+      </select>
+
+      <label>Engine</label>
+      <select value={engine} onChange={e => setEngine(e.target.value)}>
+        {carOptions.engine.map(o => (
+          <option key={o.name} value={o.name}>{o.name} (+${o.price})</option>
+        ))}
+      </select>
+
+      <h3>Total Price: ${totalPrice.toLocaleString()}</h3>
+      <button onClick={handleSubmit}>Save Changes</button>
+      <button onClick={() => navigate('/customcars')}>Cancel</button>
+    </div>
+  )
+}
+
+export default EditCar
