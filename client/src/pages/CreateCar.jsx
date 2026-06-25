@@ -15,6 +15,32 @@ const CreateCar = () => {
 
   const totalPrice = calculatePrice(color, wheels, interior, engine)
 
+  const isWheelsDisabled = (wheelName) => {
+    if (engine === 'Electric' && wheelName === 'Carbon Fiber') return true
+    return false
+  }
+
+  const isEngineDisabled = (engineName) => {
+    if (wheels === 'Carbon Fiber' && engineName === 'Electric') return true
+    return false
+  }
+
+  const handleWheelsChange = (e) => {
+    const newWheels = e.target.value
+    setWheels(newWheels)
+    if (newWheels === 'Carbon Fiber' && engine === 'Electric') {
+      setEngine(carOptions.engine[0].name)
+    }
+  }
+
+  const handleEngineChange = (e) => {
+    const newEngine = e.target.value
+    setEngine(newEngine)
+    if (newEngine === 'Electric' && wheels === 'Carbon Fiber') {
+      setWheels(carOptions.wheels[0].name)
+    }
+  }
+
   const handleSubmit = async () => {
     const validationError = validateCar(name, color, wheels, interior, engine)
     if (validationError) {
@@ -51,9 +77,11 @@ const CreateCar = () => {
       </select>
 
       <label>Wheels</label>
-      <select value={wheels} onChange={e => setWheels(e.target.value)}>
+      <select value={wheels} onChange={handleWheelsChange}>
         {carOptions.wheels.map(o => (
-          <option key={o.name} value={o.name}>{o.name} (+${o.price})</option>
+          <option key={o.name} value={o.name} disabled={isWheelsDisabled(o.name)}>
+            {o.name} (+${o.price}){isWheelsDisabled(o.name) ? ' ⚠️ incompatible' : ''}
+          </option>
         ))}
       </select>
 
@@ -65,9 +93,11 @@ const CreateCar = () => {
       </select>
 
       <label>Engine</label>
-      <select value={engine} onChange={e => setEngine(e.target.value)}>
+      <select value={engine} onChange={handleEngineChange}>
         {carOptions.engine.map(o => (
-          <option key={o.name} value={o.name}>{o.name} (+${o.price})</option>
+          <option key={o.name} value={o.name} disabled={isEngineDisabled(o.name)}>
+            {o.name} (+${o.price}){isEngineDisabled(o.name) ? ' ⚠️ incompatible' : ''}
+          </option>
         ))}
       </select>
 
