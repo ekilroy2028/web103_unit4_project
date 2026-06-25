@@ -1,13 +1,54 @@
-import React from 'react'
-import '../App.css'
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { getCars, deleteCar } from '../services/CarsAPI'
 
 const ViewCars = () => {
-    
-    return (
-        <div>
-            
-        </div>
-    )
+  const [cars, setCars] = useState([])
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    const fetchCars = async () => {
+      const data = await getCars()
+      setCars(data)
+    }
+    fetchCars()
+  }, [])
+
+  const handleDelete = async (id) => {
+    await deleteCar(id)
+    setCars(cars.filter(car => car.id !== id))
+  }
+
+  const colorMap = {
+    'Midnight Black': '#1a1a1a',
+    'Pearl White': '#f5f5f5',
+    'Racing Red': '#cc0000',
+    'Ocean Blue': '#0066cc',
+    'Matte Gray': '#808080'
+  }
+
+  return (
+    <div className='page'>
+      <h2>My Custom Cars</h2>
+      {cars.length === 0 && <p>No cars yet! Go customize one.</p>}
+      <div className='cars-grid'>
+        {cars.map(car => (
+          <div key={car.id} className='car-card'>
+            <div style={{ backgroundColor: colorMap[car.color], width: '100%', height: '100px', borderRadius: '8px', marginBottom: '10px' }} />
+            <h3>{car.name}</h3>
+            <p>Color: {car.color}</p>
+            <p>Wheels: {car.wheels}</p>
+            <p>Interior: {car.interior}</p>
+            <p>Engine: {car.engine}</p>
+            <p><strong>Total: ${Number(car.total_price).toLocaleString()}</strong></p>
+            <button onClick={() => navigate(`/customcars/${car.id}`)}>View</button>
+            <button onClick={() => navigate(`/edit/${car.id}`)}>Edit</button>
+            <button onClick={() => handleDelete(car.id)}>Delete</button>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
 }
 
 export default ViewCars
