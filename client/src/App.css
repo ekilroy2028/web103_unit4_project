@@ -5,8 +5,82 @@
     background-position: center;
     background-attachment: fixed;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
     padding-bottom: 50px;
+}
+
+.page {
+    max-width: 600px;
+    margin: 40px auto;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 30px;
+    border-radius: 12px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.page h2 {
+    margin: 0;
+}
+
+.page label {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.page input, .page select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+}
+
+.page button {
+    padding: 10px 20px;
+    background: #cc0000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 8px;
+}
+
+.page button:hover {
+    background: #990000;
+}
+
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.car-card {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+}
+
+.car-card button {
+    padding: 8px 14px;
+    background: #cc0000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 6px;
+    margin-top: 10px;
+}
+
+.car-card button:hover {
+    background: #990000;
 }

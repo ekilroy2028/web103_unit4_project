@@ -2,6 +2,7 @@ import express from 'express'
 import path from 'path'
 import favicon from 'serve-favicon'
 import dotenv from 'dotenv'
+import cors from 'cors'
 import carsRouter from './routes/cars.js'
 
 dotenv.config()
@@ -10,6 +11,7 @@ const PORT = process.env.PORT || 3000
 
 const app = express()
 
+app.use(cors())
 app.use(express.json())
 
 if (process.env.NODE_ENV === 'development') {
