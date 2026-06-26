@@ -1,40 +1,41 @@
-# WEB103 Project 4 - *Name of App Here*
+# WEB103 Project 4 - Bolt Bucket
 
 Submitted by: Elizabeth Kilroy
 
-About this web app: **App description here**
+Bolt Bucket is a full-stack car customization web app built with React, Node.js, Express, and PostgreSQL. Users can design their dream car by selecting from a range of customizable features, including exterior color, wheel type, interior material, and engine type.
 
-Time spent: **X** hours
+
+Time spent: 36 hours
 
 ## Required Features
 
 The following **required** functionality is completed:
 
 <!-- Make sure to check off completed functionality below -->
-- [ ] **The web app uses React to display data from the API.**
-- [ ] **The web app is connected to a PostgreSQL database, with an appropriately structured `CustomItem` table.**
-  - [ ]  **NOTE: Your walkthrough added to the README must include a view of your Render dashboard demonstrating that your Postgres database is available**
-  - [ ]  **NOTE: Your walkthrough added to the README must include a demonstration of your table contents. Use the psql command 'SELECT * FROM tablename;' to display your table contents.**
-- [ ] **Users can view **multiple** features of the `CustomItem` (e.g. car) they can customize, (e.g. wheels, exterior, etc.)**
-- [ ] **Each customizable feature has multiple options to choose from (e.g. exterior could be red, blue, black, etc.)**
-- [ ] **On selecting each option, the displayed visual icon for the `CustomItem` updates to match the option the user chose.**
-- [ ] **The price of the `CustomItem` (e.g. car) changes dynamically as different options are selected *OR* The app displays the total price of all features.**
-- [ ] **The visual interface changes in response to at least one customizable feature.**
-- [ ] **The user can submit their choices to save the item to the list of created `CustomItem`s.**
-- [ ] **If a user submits a feature combo that is impossible, they should receive an appropriate error message and the item should not be saved to the database.**
-- [ ] **Users can view a list of all submitted `CustomItem`s.**
-- [ ] **Users can edit a submitted `CustomItem` from the list view of submitted `CustomItem`s.**
-- [ ] **Users can delete a submitted `CustomItem` from the list view of submitted `CustomItem`s.**
-- [ ] **Users can update or delete `CustomItem`s that have been created from the detail page.**
+- [X] **The web app uses React to display data from the API.**
+- [X] **The web app is connected to a PostgreSQL database, with an appropriately structured `CustomItem` table.**
+  - [X]  **NOTE: Your walkthrough added to the README must include a view of your Render dashboard demonstrating that your Postgres database is available**
+  - [X]  **NOTE: Your walkthrough added to the README must include a demonstration of your table contents. Use the psql command 'SELECT * FROM tablename;' to display your table contents.**
+- [X] **Users can view **multiple** features of the `CustomItem` (e.g. car) they can customize, (e.g. wheels, exterior, etc.)**
+- [X] **Each customizable feature has multiple options to choose from (e.g. exterior could be red, blue, black, etc.)**
+- [X] **On selecting each option, the displayed visual icon for the `CustomItem` updates to match the option the user chose.**
+- [X] **The price of the `CustomItem` (e.g. car) changes dynamically as different options are selected *OR* The app displays the total price of all features.**
+- [X] **The visual interface changes in response to at least one customizable feature.**
+- [X] **The user can submit their choices to save the item to the list of created `CustomItem`s.**
+- [X] **If a user submits a feature combo that is impossible, they should receive an appropriate error message and the item should not be saved to the database.**
+- [X] **Users can view a list of all submitted `CustomItem`s.**
+- [X] **Users can edit a submitted `CustomItem` from the list view of submitted `CustomItem`s.**
+- [X] **Users can delete a submitted `CustomItem` from the list view of submitted `CustomItem`s.**
+- [X] **Users can update or delete `CustomItem`s that have been created from the detail page.**
 
 
 The following **optional** features are implemented:
 
-- [ ] Selecting particular options prevents incompatible options from being selected even before form submission
+- [X] Selecting particular options prevents incompatible options from being selected even before form submission
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you added to improve the site's functionality!
+- [X] List anything else that you added to improve the site's functionality!
 
 ## Video Walkthrough
 
@@ -50,8 +51,29 @@ GIF created with ...  GIF tool here
 [peek](https://github.com/phw/peek) for Linux. -->
 
 ## Notes
+Features:
+Dynamic Pricing — Total price updates in real time as options are selected, starting at a base price of $25,000 
 
-Describe any challenges encountered while building the app or any additional context you'd like to add.
+Visual Preview — The car preview changes color in real time as the user selects different exterior options 
+
+Full CRUD — Save, view, edit, and delete custom car builds 
+
+Validation — Prevents impossible feature combinations and alerts the user with an error message 
+
+Early Combo Detection — Incompatible options are disabled before submission (e.g., electric engine + carbon fiber wheels) 
+
+Tech stack:
+  • Frontend: React, Vite, React Router 
+  • Backend: Node.js, Express 
+  • Database: PostgreSQL (hosted on Render)
+
+To start:
+  1. Clone the repo
+  2. Run `npm install` in the root folder
+  3. Add your database credentials to `server/.env`
+  4. Run `npm run db:reset` to set up the database
+  5. Run `npm run dev` to start the app
+  Save it, then commit and push! 
 
 ## License
 
