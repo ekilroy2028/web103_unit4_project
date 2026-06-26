@@ -4,14 +4,12 @@ Submitted by: Elizabeth Kilroy
 
 Bolt Bucket is a full-stack car customization web app built with React, Node.js, Express, and PostgreSQL. Users can design their dream car by selecting from a range of customizable features, including exterior color, wheel type, interior material, and engine type.
 
-
 Time spent: 36 hours
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-<!-- Make sure to check off completed functionality below -->
 - [X] **The web app uses React to display data from the API.**
 - [X] **The web app is connected to a PostgreSQL database, with an appropriately structured `CustomItem` table.**
   - [X]  **NOTE: Your walkthrough added to the README must include a view of your Render dashboard demonstrating that your Postgres database is available**
@@ -73,7 +71,7 @@ To start:
   3. Add your database credentials to `server/.env`
   4. Run `npm run db:reset` to set up the database
   5. Run `npm run dev` to start the app
-  Save it, then commit and push! 
+  6.Save it, then commit and push! 
 
 ## License
 
