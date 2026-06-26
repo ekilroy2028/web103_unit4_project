@@ -49,15 +49,15 @@ GIF created with ...  GIF tool here
 
 ## Notes
 Features:
-  • Dynamic Pricing — Total price updates in real time as options are selected, starting at a base price of $25,000 
+  • Dynamic Pricing — Total price updates in real time as options are selected, starting at a base price of $25,000.
 
-  • Visual Preview — The car preview changes color in real time as the user selects different exterior options 
+  • Visual Preview — The car preview changes color in real time as the user selects different exterior options.
 
-  • Full CRUD — Save, view, edit, and delete custom car builds 
+  • Full CRUD — Save, view, edit, and delete custom car builds. 
 
-  • Validation — Prevents impossible feature combinations and alerts the user with an error message 
+  • Validation — Prevents impossible feature combinations and alerts the user with an error message. 
 
-Early Combo Detection — Incompatible options are disabled before submission (e.g., electric engine + carbon fiber wheels) 
+  • Early Combo Detection — Incompatible options are disabled before submission (e.g., electric engine + carbon fiber wheels). 
 
 Tech stack:
   • Frontend: React, Vite, React Router 
