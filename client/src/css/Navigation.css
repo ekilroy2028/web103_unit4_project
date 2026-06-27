@@ -27,3 +27,14 @@ nav a {
 .nav-btn:hover {
     background: #990000;
 }
+
+.nav-btn-sound {
+    background: transparent;
+    border: 3px solid #00ff00;
+    color: #00ff00;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: grab;
+    font-size: 1.2rem;
+    font-weight: bold;
+}

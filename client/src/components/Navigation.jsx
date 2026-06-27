@@ -26,7 +26,13 @@ const Navigation = () => {
             <ul>
                 <li><button className='nav-btn' onClick={() => handleNav('/')}>Customize</button></li>
                 <li><button className='nav-btn' onClick={() => handleNav('/customcars')}>View Cars</button></li>
-                <li><button className='nav-btn' onClick={handleToggleSound}>{soundOn ? '🔊' : '🔇'}</button></li>
+                <li><button 
+                    className='nav-btn' 
+                    onClick={handleToggleSound}
+                    style={{ border: soundOn ? 'none' : '3px solid #00ff00' }}
+                >
+                    {soundOn ? '🔊' : '🔇'}
+                </button></li>
             </ul>
         </nav>
     )
