@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { getCar, deleteCar } from '../services/CarsAPI'
+import { playClank } from '../utilities/sound.js'
 
 const CarDetails = () => {
   const { id } = useParams()
@@ -39,9 +40,9 @@ const CarDetails = () => {
       <p>Interior: {car.interior}</p>
       <p>Engine: {car.engine}</p>
       <h3>Total: ${Number(car.total_price).toLocaleString()}</h3>
-      <button onClick={() => navigate(`/edit/${car.id}`)}>Edit</button>
-      <button onClick={handleDelete}>Delete</button>
-      <button onClick={() => navigate('/customcars')}>Back</button>
+      <button onClick={() => { playClank(); navigate(`/edit/${car.id}`) }}>Edit</button>
+      <button onClick={() => { playClank(); handleDelete() }}>Delete</button>
+      <button onClick={() => { playClank(); navigate('/customcars') }}>Back</button>
     </div>
   )
 }

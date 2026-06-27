@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getCars, deleteCar } from '../services/CarsAPI'
+import { playClank } from '../utilities/sound.js'
 
 const ViewCars = () => {
   const [cars, setCars] = useState([])

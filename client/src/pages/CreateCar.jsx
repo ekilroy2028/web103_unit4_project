@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { createCar } from '../services/CarsAPI'
 import { carOptions, calculatePrice } from '../utilities/calcPrice'
 import { validateCar } from '../utilities/validation'
+import { playClank } from '../utilities/sound.js'
 
 const CreateCar = () => {
   const navigate = useNavigate()
