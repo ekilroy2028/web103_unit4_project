@@ -48,6 +48,7 @@ const CreateCar = () => {
       setError(validationError)
       return
     }
+    playClank()
     await createCar({ name, color, wheels, interior, engine, total_price: totalPrice })
     navigate('/customcars')
   }

@@ -35,6 +35,7 @@ const EditCar = () => {
       setError(validationError)
       return
     }
+    playClank()
     await updateCar(id, { name, color, wheels, interior, engine, total_price: totalPrice })
     navigate('/customcars')
   }
@@ -87,7 +88,7 @@ const EditCar = () => {
 
       <h3>Total Price: ${totalPrice.toLocaleString()}</h3>
       <button onClick={handleSubmit}>Save Changes</button>
-      <button onClick={() => navigate('/customcars')}>Cancel</button>
+      <button onClick={() => { playClank(); navigate('/customcars') }}>Cancel</button>
     </div>
   )
 }

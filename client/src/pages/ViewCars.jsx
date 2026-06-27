@@ -16,6 +16,7 @@ const ViewCars = () => {
   }, [])
 
   const handleDelete = async (id) => {
+    playClank()
     await deleteCar(id)
     setCars(cars.filter(car => car.id !== id))
   }
@@ -42,8 +43,8 @@ const ViewCars = () => {
             <p>Interior: {car.interior}</p>
             <p>Engine: {car.engine}</p>
             <p><strong>Total: ${Number(car.total_price).toLocaleString()}</strong></p>
-            <button onClick={() => navigate(`/customcars/${car.id}`)}>View</button>
-            <button onClick={() => navigate(`/edit/${car.id}`)}>Edit</button>
+            <button onClick={() => { playClank(); navigate(`/customcars/${car.id}`) }}>View</button>
+            <button onClick={() => { playClank(); navigate(`/edit/${car.id}`) }}>Edit</button>
             <button onClick={() => handleDelete(car.id)}>Delete</button>
           </div>
         ))}
