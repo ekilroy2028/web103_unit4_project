@@ -45,12 +45,17 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  GIF tool here
+LOOM:
+<div style="position: relative; padding-bottom: 55.09518477043673%; height: 0;"><iframe src="https://www.loom.com/embed/d7da4f7499964acc8de88bc9044dde0b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
-[Kap](https://getkap.co/) for macOS
+Videos | Library | Loom - 27 June 2026 - Watch Video
+
+LICEcap:
+
 
 
 ## Notes
