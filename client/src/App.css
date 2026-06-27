@@ -46,7 +46,7 @@
     color: white;
     border: none;
     border-radius: 6px;
-    cursor: pointer;
+    cursor: grab;
     font-size: 1rem;
     margin-right: 8px;
 }
@@ -75,7 +75,7 @@
     color: white;
     border: none;
     border-radius: 6px;
-    cursor: pointer;
+    cursor: grab;
     margin-right: 6px;
     margin-top: 10px;
 }

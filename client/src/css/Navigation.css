@@ -5,3 +5,25 @@ nav {
     padding-right: 50px;
     padding-top: 20px;
 }
+
+nav a {
+    color: white !important;
+    opacity: 1 !important;
+    cursor: pointer !important;
+}
+
+.nav-btn {
+    background: #cc0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: grab;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-btn:hover {
+    background: #990000;
+}

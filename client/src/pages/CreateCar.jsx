@@ -27,6 +27,7 @@ const CreateCar = () => {
   }
 
   const handleWheelsChange = (e) => {
+    playClank()
     const newWheels = e.target.value
     setWheels(newWheels)
     if (newWheels === 'Carbon Fiber' && engine === 'Electric') {
@@ -35,6 +36,7 @@ const CreateCar = () => {
   }
 
   const handleEngineChange = (e) => {
+    playClank()
     const newEngine = e.target.value
     setEngine(newEngine)
     if (newEngine === 'Electric' && wheels === 'Carbon Fiber') {
@@ -72,7 +74,7 @@ const CreateCar = () => {
       <input value={name} onChange={e => setName(e.target.value)} placeholder='My Custom Car' />
 
       <label>Color</label>
-      <select value={color} onChange={e => setColor(e.target.value)}>
+      <select value={color} onChange={e => { playClank(); setColor(e.target.value) }}>
         {carOptions.color.map(o => (
           <option key={o.name} value={o.name}>{o.name} (+${o.price})</option>
         ))}
@@ -88,7 +90,7 @@ const CreateCar = () => {
       </select>
 
       <label>Interior</label>
-      <select value={interior} onChange={e => setInterior(e.target.value)}>
+      <select value={interior} onChange={e => { playClank(); setInterior(e.target.value) }}>
         {carOptions.interior.map(o => (
           <option key={o.name} value={o.name}>{o.name} (+${o.price})</option>
         ))}

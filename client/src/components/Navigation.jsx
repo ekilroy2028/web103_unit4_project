@@ -1,3 +1,4 @@
+keykilroy@keys-Mac-mini web103_unit4_project % cat client/src/components/Navigation.jsx
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { playClank } from '../utilities/sound.js'
@@ -25,4 +26,4 @@ const Navigation = () => {
     )
 }
 
-export default Navigation
+export default Navigation%                                                                 
