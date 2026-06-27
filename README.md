@@ -76,7 +76,7 @@ To start:
   3. Add your database credentials to `server/.env`
   4. Run `npm run db:reset` to set up the database
   5. Run `npm run dev` to start the app
-  6.Save it, then commit and push! 
+  6. Open localhost:3000 in your browser General GIFs 
 
 ## License
 
