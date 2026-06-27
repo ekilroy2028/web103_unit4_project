@@ -37,6 +37,7 @@ The following **additional** features are implemented:
 
   • Sound toggle to enable or disable audio feedback
   • Visual indicators for sound status (on/off)
+  • Horn sound plays when saving a car, clank sound for all other interactions
 
 
 
