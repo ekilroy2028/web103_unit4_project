@@ -4,7 +4,7 @@ Submitted by: Elizabeth Kilroy
 
 Bolt Bucket is a full-stack car customization web app built with React, Node.js, Express, and PostgreSQL. Users can design their dream car by selecting from a range of customizable features, including exterior color, wheel type, interior material, and engine type.
 
-Time spent: 36 hours
+Time spent: 40 hours
 
 ## Required Features
 
