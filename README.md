@@ -35,6 +35,11 @@ The following **additional** features are implemented:
 
 - [X] List anything else that you added to improve the site's functionality!
 
+  • Sound toggle to enable or disable audio feedback
+  • Visual indicators for sound status (on/off)
+
+
+
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:

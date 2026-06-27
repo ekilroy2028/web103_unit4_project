@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { getCar, updateCar } from '../services/CarsAPI'
 import { carOptions, calculatePrice } from '../utilities/calcPrice'
 import { validateCar } from '../utilities/validation'
-import { playClank } from '../utilities/sound.js'
+import { playClank, playHorn } from '../utilities/sound.js'
 
 const EditCar = () => {
   const { id } = useParams()
@@ -35,7 +35,7 @@ const EditCar = () => {
       setError(validationError)
       return
     }
-    playClank()
+    playHorn()
     await updateCar(id, { name, color, wheels, interior, engine, total_price: totalPrice })
     navigate('/customcars')
   }
@@ -59,28 +59,28 @@ const EditCar = () => {
       <input value={name} onChange={e => setName(e.target.value)} />
 
       <label>Color</label>
-      <select value={color} onChange={e => setColor(e.target.value)}>
+      <select value={color} onChange={e => { playClank(); setColor(e.target.value) }}>
         {carOptions.color.map(o => (
           <option key={o.name} value={o.name}>{o.name} (+${o.price})</option>
         ))}
       </select>
 
       <label>Wheels</label>
-      <select value={wheels} onChange={e => setWheels(e.target.value)}>
+      <select value={wheels} onChange={e => { playClank(); setWheels(e.target.value) }}>
         {carOptions.wheels.map(o => (
           <option key={o.name} value={o.name}>{o.name} (+${o.price})</option>
         ))}
       </select>
 
       <label>Interior</label>
-      <select value={interior} onChange={e => setInterior(e.target.value)}>
+      <select value={interior} onChange={e => { playClank(); setInterior(e.target.value) }}>
         {carOptions.interior.map(o => (
           <option key={o.name} value={o.name}>{o.name} (+${o.price})</option>
         ))}
       </select>
 
       <label>Engine</label>
-      <select value={engine} onChange={e => setEngine(e.target.value)}>
+      <select value={engine} onChange={e => { playClank(); setEngine(e.target.value) }}>
         {carOptions.engine.map(o => (
           <option key={o.name} value={o.name}>{o.name} (+${o.price})</option>
         ))}
