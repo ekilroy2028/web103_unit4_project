@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { getCar, updateCar } from '../services/CarsAPI'
-import { carOptions, calculatePrice } from '../utilities/calcPrice'
+import { carOptions, calculatePrice, colorMap } from '../utilities/calcPrice'
 import { validateCar } from '../utilities/validation'
 import { playClank, playHorn } from '../utilities/sound.js'
 
@@ -38,14 +38,6 @@ const EditCar = () => {
     playHorn()
     await updateCar(id, { name, color, wheels, interior, engine, total_price: totalPrice })
     navigate('/customcars')
-  }
-
-  const colorMap = {
-    'Midnight Black': '#1a1a1a',
-    'Pearl White': '#f5f5f5',
-    'Racing Red': '#cc0000',
-    'Ocean Blue': '#0066cc',
-    'Matte Gray': '#808080'
   }
 
   return (

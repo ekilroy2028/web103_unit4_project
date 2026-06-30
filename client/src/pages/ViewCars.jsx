@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getCars, deleteCar } from '../services/CarsAPI'
+import { colorMap } from '../utilities/calcPrice'
 import { playClank } from '../utilities/sound.js'
 
 const ViewCars = () => {
@@ -19,14 +20,6 @@ const ViewCars = () => {
     playClank()
     await deleteCar(id)
     setCars(cars.filter(car => car.id !== id))
-  }
-
-  const colorMap = {
-    'Midnight Black': '#1a1a1a',
-    'Pearl White': '#f5f5f5',
-    'Racing Red': '#cc0000',
-    'Ocean Blue': '#0066cc',
-    'Matte Gray': '#808080'
   }
 
   return (
