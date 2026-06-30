@@ -45,18 +45,10 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
+GIF created with Loom/LICEcap
 
-
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  GIF tool here
 LOOM:
 <div style="position: relative; padding-bottom: 55.09518477043673%; height: 0;"><iframe src="https://www.loom.com/embed/d7da4f7499964acc8de88bc9044dde0b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-
-Videos | Library | Loom - 27 June 2026 - Watch Video
-
-LICEcap:
-
-
 
 ## Notes
 Features:
@@ -81,7 +73,7 @@ To start:
   3. Add your database credentials to `server/.env`
   4. Run `npm run db:reset` to set up the database
   5. Run `npm run dev` to start the app
-  6. Open localhost:3000 in your browser General GIFs 
+  6. Open localhost the Terminal generates & open it in your browser
 
 ## License
 
