@@ -35,3 +35,11 @@ export const calculatePrice = (color, wheels, interior, engine) => {
   const enginePrice = carOptions.engine.find(o => o.name === engine)?.price || 0
   return BASE_PRICE + colorPrice + wheelsPrice + interiorPrice + enginePrice
 }
+
+export const colorMap = {
+  'Midnight Black': '#1a1a1a',
+  'Pearl White': '#f5f5f5',
+  'Racing Red': '#cc0000',
+  'Ocean Blue': '#0066cc',
+  'Matte Gray': '#808080'
+}
